@@ -31,22 +31,22 @@
         // 問題ページが開いたとき
         if(page.id == "question-page") {
             // タイトルを設定
-            var title = "第" + (current+1) + "問：" + questions[current].title;
+            var title = "第" + (questions[current].no) + "問：" + questions[current].title;
             page.querySelector('#title').textContent = title;
             
             // 選択肢を設定
-            var btns = page.querySelectorAll(".btn");
-            for(var i=0; i< btns.length; i++) {
-                btns[i].textContent = questions[current].answer[i];
-            }
+            page.querySelector("#btn1").textContent = questions[current].choice1;
+            page.querySelector("#btn2").textContent = questions[current].choice2;
+            page.querySelector("#btn3").textContent = questions[current].choice3;
+            page.querySelector("#btn4").textContent = questions[current].choice4;
         }
     });
         
     // 回答を選択したとき
-    function select(index) {
+    function select(choiceNo) {
         // 結果の判定
         var icon;
-        if(index == questions[current].correct) {
+        if(choiceNo == questions[current].answer) {
             // 正解の場合、〇を表示して正答数をカウントアップ
             icon = "circle-o";
             score++;

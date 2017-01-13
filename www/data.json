@@ -1,17 +1,29 @@
 [
     {
+        "no": 1,
         "title": "段落を表すタグはどれ？",
-        "answer": ["body", "img", "a", "p"],
-        "correct": 3
+        "choice1": "b",
+        "choice2": "f",
+        "choice3": "i",
+        "choice4": "p",
+        "answer": 4
     },
     {
+        "no": 2,
         "title": "画像を表すタグはどれ？",
-        "answer": ["body", "img", "a", "p"],
-        "correct": 1
+        "choice1": "photo",
+        "choice2": "img",
+        "choice3": "image",
+        "choice4": "camera",
+        "answer": 2
     },
     {
+        "no": 3,
         "title": "リンクを表すタグはどれ？",
-        "answer": ["body", "img", "a", "p"],
-        "correct": 2
+        "choice1": "a",
+        "choice2": "b",
+        "choice3": "c",
+        "choice4": "d",
+        "answer": 1
     }
 ]
