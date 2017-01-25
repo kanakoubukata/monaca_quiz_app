@@ -24,6 +24,14 @@
     // 現在の問題番号
     var current;
     
+    // 問題を開始
+    function start() {
+        // 正答数、現在の問題番号をリセット
+        current = 0;
+        score = 0;
+        document.getElementById("navi").pushPage("question.html");
+    }
+
     // 各ページが開いたとき
     document.addEventListener('init', function(event) {
         // 開いたページ
@@ -32,13 +40,13 @@
         if(page.id == "question-page") {
             // タイトルを設定
             var title = "第" + (questions[current].no) + "問：" + questions[current].title;
-            page.querySelector('#title').textContent = title;
+            page.querySelector('#title').innerHTML = title;
             
             // 選択肢を設定
-            page.querySelector("#btn1").textContent = questions[current].choice1;
-            page.querySelector("#btn2").textContent = questions[current].choice2;
-            page.querySelector("#btn3").textContent = questions[current].choice3;
-            page.querySelector("#btn4").textContent = questions[current].choice4;
+            page.querySelector("#btn1").innerHTML = questions[current].choice1;
+            page.querySelector("#btn2").innerHTML = questions[current].choice2;
+            page.querySelector("#btn3").innerHTML = questions[current].choice3;
+            page.querySelector("#btn4").innerHTML = questions[current].choice4;
         }
     });
         
@@ -78,15 +86,6 @@
             document.getElementById("navi").resetToPage("top.html");
         }
     }
-    
-    // 問題を開始
-    function start() {
-        // 正答数、現在の問題番号をリセット
-        current = 0;
-        score = 0;
-        document.getElementById("navi").pushPage("question.html");
-    }
-
   </script>
 </head>
 <body>
